@@ -47,4 +47,18 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/reset" />
 
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="131dp"
+        android:layout_height="67dp"
+        android:background="@drawable/button_backround"
+        android:text="start"
+        android:visibility="visible"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
