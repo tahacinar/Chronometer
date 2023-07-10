@@ -2,6 +2,8 @@ package com.tahacinar.chronometer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
+import android.view.View
 import com.tahacinar.chronometer.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,5 +14,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        var zamaniDurdur: Long = 0
+
+        binding.btnStart.setOnClickListener {
+
+            binding.chronometer.base = SystemClock.elapsedRealtime() + zamaniDurdur
+            binding.chronometer.start()
+            binding.btnStart.visibility = View.GONE
+            binding.btnPause.visibility = View.VISIBLE
+            binding.imageView.setImageDrawable(getDrawable(R.drawable.pause))
+
+        }
+
+
     }
 }
